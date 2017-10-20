@@ -50,7 +50,8 @@ Getting various stats and information about current guild. Exactly:
   - Members (Users, Online Users, Bots, Online Bots)
   - Channels (Textchannels, Voicechannels)
   - Created at - date
-  - Rolenames
+  - Rolenames  
+  
 **ATTENTION:** Please only use this command on your own guilds or woth explicit permission of the guilds administrators or owners!
 
 ---
