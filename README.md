@@ -15,6 +15,9 @@ This is a little Discord self-bot I'm currenty working on. It will not have so m
 ### Current features
 
 - **`game`**
+```
+> game {string}
+```
 With this command you can change the displayed game *(`Playing...`)*.
 
 - **`embed`**
