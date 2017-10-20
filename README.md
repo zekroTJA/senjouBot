@@ -10,7 +10,7 @@ forbidden, and can result in an account termination if found."* *- quote [Discor
 
 ### PLEASE READ BEFORE USAGE
 
-If you want to use this bot or the code of it in any way in your own projects, please read this before:
+If you want to use this bot or the code of it in any way in your own projects, please read this before:  
 **[zekro Open Source Code Policy](https://gist.github.com/zekroTJA/adbce830d6c876661cb7d7244ecb19b8)**
 
 ---
