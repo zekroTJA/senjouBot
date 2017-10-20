@@ -59,8 +59,12 @@ Exactly information:
 
 Just clone or download that repository somewhere on your PC or server.
 
+For this bot, you need to install following python packages:
+- discord.py (`pip3 install discord.py`)
+- giphypop (`pip3 install giphypop`)
+
 **For Windows:**  
-1. Check if you have installed python **3**, when not, install it from [python.org](http://python.org)
+1. Check if you have installed python **3.5+**, when not, install it from [python.org](http://python.org)
 2. Open the containing folder.
 3. Double-click the batch file `start.bat`
 4. Enter your discord **account** token (**not** a bot account token!)  
@@ -68,7 +72,7 @@ Just clone or download that repository somewhere on your PC or server.
 
 **For Linux / Debian / ...**  
 1. Navigate via terminal or SSH to the containing directory
-2. Check if you have installed python **3**, if not, enter  
+2. Check if you have installed python **3.5+**, if not, enter  
 `$ sudo apt-get install python3`  *or use that packet manager which is installed on your system*
 2. If you have not installed screen app, please do this with  
 `$ sudo apt-get install screen`  *or use that packet manager which is installed on your system*
