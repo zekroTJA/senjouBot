@@ -60,8 +60,8 @@ Exactly information:
 Just clone or download that repository somewhere on your PC or server.
 
 For this bot, you need to install following python packages:
-- discord.py (`pip3 install discord.py`)
-- giphypop (`pip3 install giphypop`)
+- [discord.py](https://github.com/Rapptz/discord.py) (`pip3 install discord.py`)
+- [giphypop](https://github.com/shaunduncan/giphypop) (`pip3 install giphypop`)
 
 **For Windows:**  
 1. Check if you have installed python **3.5+**, when not, install it from [python.org](http://python.org)
