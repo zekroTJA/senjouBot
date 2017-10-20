@@ -51,7 +51,7 @@ Just clone or download that repository somewhere on your PC or server.
 2. Open the containing folder.
 3. Double-click the batch file `start.bat`
 4. Enter your discord **account** token (**not** a bot account token!)  
-*If you don't know how to get your private account token, take a look [here]().*
+*If you don't know how to get your private account token, take a look below.*
 
 **For Linux / Debian / ...**  
 1. Navigate via terminal or SSH to the containing directory
@@ -61,4 +61,13 @@ Just clone or download that repository somewhere on your PC or server.
 `$ sudo apt-get install screen`  *or use that packet manager which is installed on your system*
 3. Start the start script with `$ sh start.sh`
 4. Enter your discord **account** token (**not** a bot account token!)  
-*If you don't know how to get your private account token, take a look [here]().*
+*If you don't know how to get your private account token, take a look below.*
+
+---
+### GETTING PRIVATE ACCOUNT TOKEN
+
+1. Open your desktop discord client
+2. Press `[STRG]` + `[SHIFT]` + `[I]` to open developer tools
+3. Navigate to tab `Application`
+4. Click on the left side on `Local Storage` -> `https://discordapp.com`
+5. In the table, search for the key `token` and copy your token
