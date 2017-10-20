@@ -7,6 +7,14 @@ If you decide to use this bot on your own Discord account(s), I will not be liab
 forbidden, and can result in an account termination if found."* *- quote [Discord Bots TOS](https://discordapp.com/developers/docs/topics/oauth2#bot-vs-user-accounts)*
 
 ---
+
+### PLEASE READ BEFORE USAGE
+
+If you want to use this bot or the code of it in any way in your own projects, please read this before:
+**[zekro Open Source Code Policy](https://gist.github.com/zekroTJA/adbce830d6c876661cb7d7244ecb19b8)**
+
+---
+
 ### DESCRIPTION
 
 This is a little Discord self-bot I'm currenty working on. It will not have so much functions, just little things like sending gifs, creating embed messages, changing game and status and such stuff.
