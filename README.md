@@ -47,15 +47,18 @@ If you have your own giphy API token, please open `main.py` and enter at `GIPHY_
 Just clone or download that repository somewhere on your PC or server.
 
 **For Windows:**  
-1. Open the containing folder.
-2. Double-click the batch file `start.bat`
-3. Enter your discord **account** token (**not** a bot account token!)  
+1. Check if you have installed python **3**, when not, install it from [python.org](http://python.org)
+2. Open the containing folder.
+3. Double-click the batch file `start.bat`
+4. Enter your discord **account** token (**not** a bot account token!)  
 *If you don't know how to get your private account token, take a look [here]().*
 
 **For Linux / Debian / ...**  
 1. Navigate via terminal or SSH to the containing directory
+2. Check if you have installed python **3**, if not, enter  
+`$ sudo apt-get install python3`  *or use that packet manager which is installed on your system*
 2. If you have not installed screen app, please do this with  
-`apt install screen`  *or use that packet manager which is installed on your system*
+`$ sudo apt-get install screen`  *or use that packet manager which is installed on your system*
 3. Start the start script with `$ sh start.sh`
 4. Enter your discord **account** token (**not** a bot account token!)  
 *If you don't know how to get your private account token, take a look [here]().*
