@@ -35,3 +35,27 @@ Set status which is displayed to others. A little side effect of a selfbot is, t
 That's just a little command for myself, because I'm getting a lot of questions which are often the same, so I can easily answer with links or something like that with a bot command instead of searching for it again and again.  
 Maybe later, I will implement a function, that you can set your links with the message into a config file to set links outside of the bot's code.  
 *Enter no argument to list all links.*
+
+- **gif**  
+`>gif {search query} ({-0|1|2|...})`  
+Just a simple gif command to send gifs from keywords *(and index of search result with attaching `-1` or some other index)* with giphy API.  
+If you have your own giphy API token, please open `main.py` and enter at `GIPHY_TOKEN` your giphy API token.
+
+---
+### SETUP
+
+Just clone or download that repository somewhere on your PC or server.
+
+**For Windows:**  
+1. Open the containing folder.
+2. Double-click the batch file `start.bat`
+3. Enter your discord **account** token (**not** a bot account token!)  
+*If you don't know how to get your private account token, take a look [here]().*
+
+**For Linux / Debian / ...**  
+1. Navigate via terminal or SSH to the containing directory
+2. If you have not installed screen app, please do this with  
+`apt install screen`  *or use that packet manager which is installed on your system*
+3. Start the start script with `$ sh start.sh`
+4. Enter your discord **account** token (**not** a bot account token!)  
+*If you don't know how to get your private account token, take a look [here]().*
