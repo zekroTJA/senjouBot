@@ -43,16 +43,16 @@ If you have your own giphy API token, please open `main.py` and enter at `GIPHY_
 
 - **guild**
 `>guild`
-Getting various stats and information about current guild. Exactly:
+Getting various stats and information about current guild. 
+**ATTENTION:** Please only use this command on your own guilds or woth explicit permission of the guilds administrators or owners!  
+Exactly information:
   - ID
   - Owner (Name, ID)
   - Region
   - Members (Users, Online Users, Bots, Online Bots)
   - Channels (Textchannels, Voicechannels)
   - Created at - date
-  - Rolenames  
-  
-**ATTENTION:** Please only use this command on your own guilds or woth explicit permission of the guilds administrators or owners!
+  - Rolenames
 
 ---
 ### SETUP
