@@ -41,8 +41,8 @@ Maybe later, I will implement a function, that you can set your links with the m
 Just a simple gif command to send gifs from keywords *(and index of search result with attaching `-1` or some other index)* with giphy API.  
 If you have your own giphy API token, please open `main.py` and enter at `GIPHY_TOKEN` your giphy API token.
 
-- **guild**
-`>guild`
+- **guild**  
+`>guild`  
 Getting various stats and information about current guild. 
 **ATTENTION:** Please only use this command on your own guilds or woth explicit permission of the guilds administrators or owners!  
 Exactly information:
@@ -53,6 +53,10 @@ Exactly information:
   - Channels (Textchannels, Voicechannels)
   - Created at - date
   - Rolenames
+
+- **lmgtfy**  
+`>lmgtfy {your search query}`  
+A command to create easy embeded [let me google that for you](http://lmgtfy.com/) links.
 
 ---
 ### SETUP
