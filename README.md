@@ -6,13 +6,13 @@ If you decide to use this bot on your own Discord account(s), I will not be liab
 *"[...] Automating normal user accounts (generally called "self-bots") outside of the OAuth2/bot API is 
 forbidden, and can result in an account termination if found."* *- quote [Discord Bots TOS](https://discordapp.com/developers/docs/topics/oauth2#bot-vs-user-accounts)*
 
-
+---
 ### DESCRIPTION
 
 This is a little Discord self-bot I'm currenty working on. It will not have so much functions, just little things like sending gifs, creating embed messages, changing game and status and such stuff.
 
-
-### Current features
+---
+### CURRENT FEATURES
 *{this is an argument} - ({this is an optional argument}) - {these|are|valid|argument|options}*
 
 - **game**
