@@ -13,13 +13,19 @@ This is a little Discord self-bot I'm currenty working on. It will not have so m
 
 
 ### Current features
+*{this is an argument} - ({this is an optional argument}) - {these|are|valid|argument|options}*
 
-- **`game`**
-```
-> game {string}
-```
+- **game**
+`>game ({string})`
 With this command you can change the displayed game *(`Playing...`)*.
+Enter no argument to disbale game display.
 
-- **`embed`**
+- **embed**
+`>embed {message} ({-c red|green|blue|gold|orange})`
 Sending colored embed messages, maby later with title and fields.
 ![img](http://zekro.de/ss/Discord_2017-10-19_21-57-40.jpg)
+
+- **status**
+`>status ({on|online|off|offline|dnd|idle|afk})`
+Set status wich is displayed to others. A little side effect of a selfbot is, that other users could see a other status then you set, because only the status of the bot will be displayd to other users. So you can set your status to 'dnd' or 'idlde', but everyone else could see you as 'online', because only the bots status is displayed to others.
+Set no argument to set your status to 'online'.
