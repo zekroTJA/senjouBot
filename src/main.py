@@ -59,7 +59,7 @@ async def test(ctx, *args):
     """
     Just a command for testing purposes and debugging
     """
-    print(args)
+    print(ctx.message.server.get_member(bot.user.id).game)
 
 
 @bot.command(pass_context=True, aliases=['g'])
@@ -68,11 +68,12 @@ async def game(ctx, *args):
     Command for changing 'game' status
     """
     if args:
+        cstatus = ctx.message.server.get_member(bot.user.id).status
         txt = " ".join(args)
-        await bot.change_presence(game=Game(name=txt))
+        await bot.change_presence(game=Game(name=txt), status=cstatus)
         msg = await bot.send_message(ctx.message.channel, embed=Embed(color=Color.green(), description="Changed game to `%s`!" % txt))
     else:
-        await bot.change_presence(game=None)
+        await bot.change_presence(game=None, status=cstatus)
         msg = await bot.send_message(ctx.message.channel, embed=Embed(color=Color.gold(), description="Disabled game display."))
     await bot.delete_message(ctx.message)
     await asyncio.sleep(3)
@@ -122,15 +123,16 @@ async def status(ctx, *args):
         "afk":      Status.idle
     }
     if args:
+        cgame = ctx.message.server.get_member(bot.user.id).game
         if (args[0] in stati):
             if (args[0] == "afk"):
-                await bot.change_presence(status=Status.idle, afk=True)
+                await bot.change_presence(game=cgame, status=Status.idle, afk=True)
             else:
-                await bot.change_presence(status=stati[args[0]], afk=False)
+                await bot.change_presence(game=cgame, status=stati[args[0]], afk=False)
                 print(stati[args[0]])
             msg = await bot.send_message(ctx.message.channel, embed=Embed(description="Changed current status to `%s`." % args[0], color=Color.gold()))
     else:
-        await bot.change_presence(status=Status.online, afk=False)
+        await bot.change_presence(game=cgame, status=Status.online, afk=False)
         msg = await bot.send_message(ctx.message.channel, embed=Embed(description="Changed current status to `online`.", color=Color.gold()))
     await bot.delete_message(ctx.message)
     await asyncio.sleep(3)
@@ -233,6 +235,33 @@ async def lmgtfy(ctx, *args):
         url = "http://lmgtfy.com/?q=" + "+".join(args)
         await bot.send_message(ctx.message.channel, embed=Embed(description="**[Look here!](%s)**" % url, color=Color.gold()))
     await bot.delete_message(ctx.message)
+
+
+@bot.command(pass_context=True, aliases=['gnick', 'gn'])
+async def globalnick(ctx, *args):
+    """
+    With this commandm, you can change your nickname on all discord servers
+    you are on and you have the permission to chnage your nick name.
+    ATTENTION: Please don't overuse this command because I dont knoww,
+    if it coudl lead to a discord account ban!
+    """
+    if args:
+        newname = args[0]
+        errors = []
+        for s in bot.servers:
+            await bot.edit_message(ctx.message, embed=Embed(description="Changing nickname on `%s`..." % s.name))
+            try:
+                await bot.change_nickname(s.get_member(bot.user.id), newname)
+            except:
+                errors.append(s.name)
+                pass
+        if errors:
+            msg = await bot.send_message(ctx.message.channel, embed=Embed(color=Color.red(), description="**Failed changing nickanme on following servers:**\n\n" + "\n".join(errors)))
+        else:
+            msg = await bot.send_message(ctx.message.channel, embed=Embed(color=Color.green(), description="Successfully changed nick on all servers!"))
+    await bot.delete_message(ctx.message)
+    await asyncio.sleep(3)
+    await bot.delete_message(msg)
 
 
 # Testing if file 'token.txt' exists. If it is so, then the token
