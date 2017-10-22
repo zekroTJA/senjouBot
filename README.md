@@ -23,17 +23,17 @@ This is a little Discord self-bot I'm currenty working on. It will not have so m
 ### CURRENT FEATURES  
 *{this is an argument} - ({this is an optional argument}) - {these|are|valid|argument|options}*
 
-- **game**  
+- **game** [`g`]  
 `>game ({string})`  
 With this command you can change the displayed game *(`Playing...`)*.  
 *Enter no argument to disbale game display.*
 
-- **embed**  
+- **embed** [`em`, `e`]  
 `>embed {message} ({-c red|green|blue|gold|orange})`  
 Sending colored embed messages, maby later with title and fields.  
 ![img](http://zekro.de/ss/Discord_2017-10-19_21-57-40.jpg)
 
-- **status**  
+- **status** [`s`]  
 `>status ({on|online|off|offline|dnd|idle|afk})`  
 Set status which is displayed to others. A little side effect of a selfbot is, that other users could see a other status then you set, because only the status of the bot will be displayd to other users. So you can set your status to 'dnd' or 'idlde', but everyone else could see you as 'online', because only the bots status is displayed to others.  
 *Set no argument to set your status to 'online'.*
@@ -49,7 +49,7 @@ Maybe later, I will implement a function, that you can set your links with the m
 Just a simple gif command to send gifs from keywords *(and index of search result with attaching `-1` or some other index)* with giphy API.  
 If you have your own giphy API token, please open `main.py` and enter at `GIPHY_TOKEN` your giphy API token.
 
-- **guild**  
+- **guild** [`server`]  
 `>guild`  
 Getting various stats and information about current guild. 
 **ATTENTION:** Please only use this command on your own guilds or woth explicit permission of the guilds administrators or owners!  
@@ -62,9 +62,14 @@ Exactly information:
   - Created at - date
   - Rolenames
 
-- **lmgtfy**  
+- **lmgtfy** [`google`]  
 `>lmgtfy {your search query}`  
 A command to create easy embeded [let me google that for you](http://lmgtfy.com/) links.
+
+- **globalnick** [`gnick`, `gn`]  
+`>gn {nickname}`  
+With thi command, you can automatically change your nickname on every server you are on, if you have the permission for that on the particualar servers.  
+**ATTENTION:** Please don't overuse this command, because I dont know exactly if it can lead to a discord account ban!
 
 ---
 ### SETUP
