@@ -25,14 +25,24 @@ FAQS = {
     "faq": [Embed(description="[zekro FAQ](https://gist.github.com/zekroTJA/75d2da53b01a4c76db27ef6befbfabf6)", color=Color.blue()), "zekro FAQ"]
 }
 
+# Here you can define which message invokes should be automatically replced
+REPLACES = {
+    "-lenny-": "( ͡° ͜ʖ ͡°)",
+    "-meh-": "¯\_(ツ)_/¯",
+    "-wut-": "ಠ_ಠ",
+    "-yeah-": "(⌐■_■)",
+    "-tt-": "(╯°□°）╯︵ ┻━┻",
+    "-give-": "༼ つ ◕_◕ ༽つ",
+}
+
 
 # Creating selfbot instance
 bot = commands.Bot(command_prefix=PREFIX, description='''Selfbot by zekro''', self_bot=True)
 
 
-###############
-# E V E N T S #
-###############
+#####################
+# L I S T E N E R S #
+#####################
 
 @bot.event
 async def on_ready():
@@ -49,6 +59,19 @@ async def on_ready():
     print("Logged in as %s#%s" % (bot.user.name, bot.user.discriminator))
     print("ID: " + bot.user.id)
     
+
+@bot.event
+async def on_message(msg):
+    """
+    Replace invokes in your message automatically with other text like emotes.
+    Invokes and replacements can be defined in 'REPLACES' dict above.
+    """
+    if msg.author == bot.user:
+        for k, v in REPLACES.items():
+            if k in msg.content:
+                await bot.edit_message(msg, msg.content.replace(k, v))
+
+
 
 ###################
 # C O M M A N D S #
