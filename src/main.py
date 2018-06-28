@@ -183,7 +183,7 @@ async def faq(ctx, *args):
 @bot.command(pass_context=True)
 async def gif(ctx, *args):
     """
-    A simple command t osend gifs by keyword from giphy api
+    A simple command to send gifs by keyword from giphy api
     """
     if args:
         query = " ".join(args)
@@ -263,10 +263,10 @@ async def lmgtfy(ctx, *args):
 @bot.command(pass_context=True, aliases=['gnick', 'gn'])
 async def globalnick(ctx, *args):
     """
-    With this commandm, you can change your nickname on all discord servers
-    you are on and you have the permission to chnage your nick name.
-    ATTENTION: Please don't overuse this command because I dont knoww,
-    if it coudl lead to a discord account ban!
+    With this command, you can change your nickname on all discord servers
+    you are on and you have the permission to chnage your nickname.
+    ATTENTION: Please don't overuse this command because I dont know,
+    if it could lead to a discord account ban!
     """
     if args:
         newname = args[0]
