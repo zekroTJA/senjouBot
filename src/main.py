@@ -70,6 +70,8 @@ async def on_message(msg):
         for k, v in REPLACES.items():
             if k in msg.content:
                 await bot.edit_message(msg, msg.content.replace(k, v))
+                
+    await bot.process_commands(msg)
 
 
 
